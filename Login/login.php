@@ -3,11 +3,11 @@ session_start();
 
 $user = dataFilter($_POST['uname']);
 $pass = $_POST['pass'];
-$category = dataFilter($_POST['category']);
+$category = strtolower(dataFilter($_POST['category']));
 
 require '../db.php';
 
-if ($category == "1") {
+if ($category == "farmer") {
     $sql = "SELECT * FROM farmer WHERE fusername='$user'";
     $result = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($result);
@@ -50,7 +50,7 @@ if ($category == "1") {
             header("location: error.php");
         }
     }
-} else {
+} else if($category == "buyer") {
     $sql = "SELECT * FROM buyer WHERE busername='$user'";
     $result = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($result);
@@ -83,6 +83,10 @@ if ($category == "1") {
             header("location: error.php");
         }
     }
+}
+else {
+    $_SESSION['message'] = "Write Farmer or Buyer!";
+    header("location: error.php");
 }
 
 function dataFilter($data)

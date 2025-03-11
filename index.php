@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>AgroCulture</title>
+	<title>Farm2Table</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -34,7 +34,7 @@ require 'menu.php';
 <!-- Banner -->
 <section id="banner" class="wrapper">
 	<div class="container">
-		<h2>AgroCulture</h2>
+		<h2>Farm2Table</h2>
 		<p>Your Product Our Market</p>
 		<br><br>
 		<center>
@@ -54,7 +54,7 @@ require 'menu.php';
 <section id="one" class="wrapper style1 align-center">
 	<div class="container">
 		<header>
-			<h2>AgroCulture</h2>
+			<h2>Farm2Table</h2>
 			<p>Explore the new way of trading...</p>
 		</header>
 		<div class="row 200%">
@@ -80,7 +80,7 @@ require 'menu.php';
 		<h1 style="font: 35px calibri;">About Us</h1>
 	</center>
 	<div class="footer-left">
-		<h3 style="font-family: 'Times New Roman', cursive;">AgroCulture &copy; </h3>
+		<h3 style="font-family: 'Times New Roman', cursive;">Farm2Table &copy; </h3>
 		<br />
 		<p style="font-size:20px;color:white">Your product Our market !!!</p>
 		<br />
@@ -97,14 +97,14 @@ require 'menu.php';
 		</div>
 		<div>
 			<i class="fa fa-envelope"></i>
-			<p style="font-size:20px"><a href="mailto:AgroCulture@gmail.com" style="color:white">farmtotable@agric.com</a></p>
+			<p style="font-size:20px"><a href="mailto:Farm2Table@gmail.com" style="color:white">farmtotable@agric.com</a></p>
 		</div>
 	</div>
 
 	<div class="footer-right">
 		<p class="footer-company-about" style="color:white">
-			<span style="font-size:20px"><b>About AgroCulture</b></span>
-			AgroCulture is e-commerce trading platform for grains & grocerries...see more
+			<span style="font-size:20px"><b>About Farm2Table</b></span>
+			Farm2Table is e-commerce trading platform for grains & grocerries...see more
 		</p>
 		<div class="footer-icons">
 			<a href="#"><i style="margin-left: 0;margin-top:5px;" class="fa fa-facebook"></i></a>
@@ -122,37 +122,33 @@ require 'menu.php';
 
 		<div class="container">
 			<h3>Login</h3>
-			<form method="post" action="Login/login.php">
-				<div class="row uniform 50%">
-					<div class="7u$">
-						<input type="text" name="uname" id="uname" value="" placeholder="UserName" style="width:80%" required />
-					</div>
-					<div class="7u$">
-						<input type="password" name="pass" id="pass" value="" placeholder="Password" style="width:80%" required />
-					</div>
+			<div class="row uniform 50%">
+				<div class="7u$">
+					<input type="text" name="uname" id="uname" value="" placeholder="UserName" style="width:80%" required />
 				</div>
-				<div class="row uniform">
-					<p>
-						<b>Category : </b>
-					</p>
-					<div class="3u 12u$(small)">
-						<input type="radio" id="farmer" name="category" value="farmer" checked>
-						<label for="farmer">Farmer</label>
-					</div>
-					<div class="3u 12u$(small)">
-						<input type="radio" id="buyer" name="category" value="buyer">
-						<label for="buyer">Buyer</label>
-					</div>
+				<div class="7u$">
+					<input type="password" name="pass" id="pass" value="" placeholder="Password" style="width:80%" required />
 				</div>
-				<center>
-					<div class="row uniform">
-						<div class="7u 12u$(small)">
-							<input type="submit" value="Login" />
-						</div>
-					</div>
-				</center>
+			</div>
+			<div class="row uniform">
+				<p>
+					<b>Category : </b>
+				</p>
+				<div class="3u 12u$(small)">
+					<input type="text" id="farmer" name="category">
+					<label for="farmer">Write Farmer or Buyer</label>
+				</div>
+			</div>
 		</div>
-	</form>
+		<center>
+			<div class="row uniform">
+				<div class="7u 12u$(small)">
+					<input type="submit" value="Login" />
+				</div>
+			</div>
+		</center>
+</div>
+</form>
 </div>
 
 <div id="id02" class="modal">
@@ -164,63 +160,59 @@ require 'menu.php';
 		<div class="container">
 			<section>
 				<h3>SignUp</h3>
-				<form method="post" action="Login/signUp.php">
-					<center>
-						<div class="row uniform">
-							<div class="3u 12u$(xsmall)">
-								<input type="text" name="name" id="name" value="" placeholder="Name" required />
-							</div>
-							<div class="3u 12u$(xsmall)">
-								<input type="text" name="uname" id="uname" value="" placeholder="UserName" required />
-							</div>
+				<center>
+					<div class="row uniform">
+						<div class="3u 12u$(xsmall)">
+							<input type="text" name="name" id="name" value="" placeholder="Name" required />
 						</div>
-						<div class="row uniform">
-							<div class="3u 12u$(xsmall)">
-								<input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number" required />
-							</div>
+						<div class="3u 12u$(xsmall)">
+							<input type="text" name="uname" id="uname" value="" placeholder="UserName" required />
+						</div>
+					</div>
+					<div class="row uniform">
+						<div class="3u 12u$(xsmall)">
+							<input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number" required />
+						</div>
 
-							<div class="3u 12u$(xsmall)">
-								<input type="email" name="email" id="email" value="" placeholder="Email" required />
-							</div>
+						<div class="3u 12u$(xsmall)">
+							<input type="email" name="email" id="email" value="" placeholder="Email" required />
 						</div>
-						<div class="row uniform">
-							<div class="3u 12u$(xsmall)">
-								<input type="password" name="password" id="password" value="" placeholder="Password" required />
-							</div>
-							<div class="3u 12u$(xsmall)">
-								<input type="password" name="pass" id="pass" value="" placeholder="Retype Password" required />
-							</div>
+					</div>
+					<div class="row uniform">
+						<div class="3u 12u$(xsmall)">
+							<input type="password" name="password" id="password" value="" placeholder="Password" required />
 						</div>
-						<div class="row uniform">
-							<div class="6u 12u$(xsmall)">
-								<input type="text" name="addr" id="addr" value="" placeholder="Address" style="width:80%" required />
-							</div>
+						<div class="3u 12u$(xsmall)">
+							<input type="password" name="pass" id="pass" value="" placeholder="Retype Password" required />
 						</div>
-						<div class="row uniform">
-							<p>
-								<b>Category : </b>
-							</p>
-							<div class="3u 12u$(small)">
-								<input type="radio" id="farmer" name="category" value="1">
-								<label for="farmer">Farmer</label>
-							</div>
-							<div class="3u 12u$(small)">
-								<input type="radio" id="buyer" name="category" value="0">
-								<label for="buyer">Buyer</label>
-							</div>
+					</div>
+					<div class="row uniform">
+						<div class="6u 12u$(xsmall)">
+							<input type="text" name="addr" id="addr" value="" placeholder="Address" style="width:80%" required />
 						</div>
-						<div class="row uniform">
-							<div class="3u 12u$(small)">
-								<input type="submit" value="Submit" name="submit" class="special" /></li>
-							</div>
-							<div class="3u 12u$(small)">
-								<input type="reset" value="Reset" name="reset" /></li>
-							</div>
+					</div>
+					<div class="row uniform">
+						<p>
+							<b>Category : </b>
+						</p>
+						<div class="3u 12u$(small)">
+							<input type="text" id="farmer" name="category">
+							<label for="farmer">Write Farmer or Buyer</label>
 						</div>
-					</center>
-				</form>
-			</section>
-		</div>
+
+					</div>
+					<div class="row uniform">
+						<div class="3u 12u$(small)">
+							<input type="submit" value="Submit" name="submit" class="special" /></li>
+						</div>
+						<div class="3u 12u$(small)">
+							<input type="reset" value="Reset" name="reset" /></li>
+						</div>
+					</div>
+				</center>
+	</form>
+	</section>
+</div>
 </div>
 </form>
 </div>

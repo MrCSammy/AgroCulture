@@ -3,7 +3,7 @@
     $serverName = "localhost";
     $userName = "root";
     $password = "";
-    $dbName = "sourcecodester_agroculturedb";
+    $dbName = "farm2table";
 
     $conn = mysqli_connect($serverName, $userName, $password, $dbName);
     if (!$conn)

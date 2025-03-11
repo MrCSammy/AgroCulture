@@ -100,7 +100,7 @@
 
 <html>
 	<head>
-		<title>AgroCulture : Blogs</title>
+		<title>Farm2Table : Blogs</title>
 		<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">

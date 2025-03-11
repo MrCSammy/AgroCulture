@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = dataFilter($_POST['email']);
     $pass =    dataFilter(password_hash($_POST['pass'], PASSWORD_BCRYPT));
     $hash = dataFilter(md5(rand(0, 1000)));
-    $category = dataFilter($_POST['category']);
+    $category = strtolower(dataFilter($_POST['category']));
     $addr = dataFilter($_POST['addr']);
 
     $_SESSION['Email'] = $email;
@@ -45,7 +45,7 @@ if (!isset($_POST['category'])) {
     exit();
 }
 
-if ($category == "1") {
+if ($category == "farmer") {
     $sql = "SELECT * FROM farmer WHERE femail='$email'";
 
     $result = mysqli_query($conn, "SELECT * FROM farmer WHERE femail='$email'") or die($mysqli->error());
@@ -90,17 +90,17 @@ if ($category == "1") {
                 $mail->Port = 587;
 
                 //Recipients
-                $mail->setFrom('smartsamuel017@gmail.com', 'AgroCulture');
+                $mail->setFrom('smartsamuel017@gmail.com', 'Farm2Table');
                 $mail->addAddress($email, $user);
 
                 //Content
                 $mail->isHTML(true);
-                $mail->Subject = 'Account Verification ( AgroCulture.com )';
+                $mail->Subject = 'Account Verification ( Farm2Table.com )';
                 $mail->Body    = "
                 Hello $user,<br><br>
                 Thank you for signing up!<br><br>
                 Please click this link to activate your account:<br>
-                <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+                <a href='http://localhost/Farm2Table/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
                 $mail->send();
                 $_SESSION['message'] = "Confirmation link has been sent to $email, please verify your account by clicking on the link in the message!";
@@ -115,7 +115,8 @@ if ($category == "1") {
             header("location: error.php");
         }
     }
-} else {
+} 
+else if ($category == "buyer") {
     $sql = "SELECT * FROM buyer WHERE bemail='$email'";
 
     $result = mysqli_query($conn, "SELECT * FROM buyer WHERE bemail='$email'") or die($mysqli->error());
@@ -149,17 +150,17 @@ if ($category == "1") {
                 $mail->Port = 587;
 
                 //Recipients
-                $mail->setFrom('SmartSamuel017@gmail.com', 'AgroCulture');
+                $mail->setFrom('SmartSamuel017@gmail.com', 'Farm2Table');
                 $mail->addAddress($email, $user);
 
                 //Content
                 $mail->isHTML(true);
-                $mail->Subject = 'Account Verification ( AgroCulture.com )';
+                $mail->Subject = 'Account Verification ( Farm2Table.com )';
                 $mail->Body    = "
                 Hello $user,<br><br>
                 Thank you for signing up!<br><br>
                 Please click this link to activate your account:<br>
-                <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+                <a href='http://localhost/Farm2Table/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
                 $mail->send();
                 $_SESSION['message'] = "Confirmation link has been sent to $email, please verify your account by clicking on the link in the message!";
@@ -174,6 +175,10 @@ if ($category == "1") {
             header("location: error.php");
         }
     }
+}
+else {
+    $_SESSION['message'] = "Write Farmer or Buyer!";
+    header("location: error.php");
 }
 
 function dataFilter($data)
