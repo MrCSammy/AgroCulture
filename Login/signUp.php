@@ -100,7 +100,7 @@ if ($category == "farmer") {
                 Hello $user,<br><br>
                 Thank you for signing up!<br><br>
                 Please click this link to activate your account:<br>
-                <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+                <a href='http://farm2table.zya.me/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
                 $mail->send();
                 $_SESSION['message'] = "Confirmation link has been sent to $email, please verify your account by clicking on the link in the message!";
@@ -160,7 +160,7 @@ else if ($category == "buyer") {
                 Hello $user,<br><br>
                 Thank you for signing up!<br><br>
                 Please click this link to activate your account:<br>
-                <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+                <a href='http://farm2table.zya.me/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
                 $mail->send();
                 $_SESSION['message'] = "Confirmation link has been sent to $email, please verify your account by clicking on the link in the message!";

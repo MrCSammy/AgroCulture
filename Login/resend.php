@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Hello $user,<br><br>
         Thank you for signing up!<br><br>
         Please click this link to activate your account:<br>
-        <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+        <a href='http://farm2table.zya.me/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
         $mail->send();
         $_SESSION['message'] = "Verification mail resent to $email.";
