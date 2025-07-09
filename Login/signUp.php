@@ -85,12 +85,12 @@ if ($category == "farmer") {
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
                 $mail->Username = 'smartsamuel017@gmail.com';
-                $mail->Password = 'yxzaaloqhrytlsyr';
+                $mail->Password = 'ptdvusgyqqewgtgc';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
                 //Recipients
-                $mail->setFrom('smartsamuel017@gmail.com', 'Farm2Table');
+                $mail->setFrom('smartsamuel017@gmail.com', 'EdwinProjectCorrrect');
                 $mail->addAddress($email, $user);
 
                 //Content
@@ -100,7 +100,7 @@ if ($category == "farmer") {
                 Hello $user,<br><br>
                 Thank you for signing up!<br><br>
                 Please click this link to activate your account:<br>
-                <a href='http://localhost/Farm2Table/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+                <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
                 $mail->send();
                 $_SESSION['message'] = "Confirmation link has been sent to $email, please verify your account by clicking on the link in the message!";
@@ -145,12 +145,12 @@ else if ($category == "buyer") {
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
                 $mail->Username = 'smartsamuel017@gmail.com';
-                $mail->Password = 'yxzaaloqhrytlsyr';
+                $mail->Password = 'ptdvusgyqqewgtgc';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
                 //Recipients
-                $mail->setFrom('SmartSamuel017@gmail.com', 'Farm2Table');
+                $mail->setFrom('SmartSamuel017@gmail.com', 'EdwinProjectCorrrect');
                 $mail->addAddress($email, $user);
 
                 //Content
@@ -160,7 +160,7 @@ else if ($category == "buyer") {
                 Hello $user,<br><br>
                 Thank you for signing up!<br><br>
                 Please click this link to activate your account:<br>
-                <a href='http://localhost/Farm2Table/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
+                <a href='http://localhost/AgroCulture/Login/verify.php?email=$email&hash=$hash'>Verify Account</a>";
 
                 $mail->send();
                 $_SESSION['message'] = "Confirmation link has been sent to $email, please verify your account by clicking on the link in the message!";
